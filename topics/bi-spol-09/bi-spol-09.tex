@@ -121,8 +121,8 @@ Výsledkem R $\div$ S jsou prvky x z R, které se diskvalifikovat nepodařilo.
 \begin{description}
   \item[DDL] Definiční jazyk -- např. manipulace s tabulkama, integritní omezení $create table$
   \item[DML] Manipulační jazyk -- např. $SELECT, INSERT, UPDATE$ apod.
-  \item[DCL] Jazyk na přístupy $commit, rollback$
-  \item[TCL] Jazyk pro řízení transakcí $grant <prikaz> on <table> to <user>$
+  \item[DCL] Jazyk na přístupy $grant <prikaz> on <table> to <user>$
+  \item[TCL] Jazyk pro řízení transakcí $commit, rollback, savepoint$
 \end{description}
 
 \begin{verbatim}
@@ -148,7 +148,7 @@ Okamžik kontroly IO, dočasné vypnutí/zapnutí IO:
   \item možnosti stanovit při deklaraci integritního omezení čas, kdy se má kontrolovat
   \item kontrolu IO lze definovat jako odložitelnou až na konec transakce
   \item v rámci session pak lze stanovit, zda IO kontruje IMMEDIATE nebo až na konci transakce
-  \item Oravle dovoluje v příkazu ALTER TABLE také IO dočasně vypnouy/zneplatnit DISABLE/ENABLE CONSTRAINT
+  \item Oracle dovoluje v příkazu ALTER TABLE také IO dočasně vypnout/zneplatnit DISABLE/ENABLE CONSTRAINT
   \item zpětně zapnutí IO pak může/nemusí vyžadovat kontrolu platnosti dat již vložených v databázi
 \end{itemize}
 % \section{Dotazování v relační algebře}
